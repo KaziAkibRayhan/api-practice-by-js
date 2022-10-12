@@ -39,6 +39,7 @@ const loadMealDetails = (meal) => {
 };
 
 const displayMealDetails = (meal) => {
+    console.log(meal)
     const displayMealContainer = document.getElementById('display-detail-container');
     displayMealContainer.innerHTML = '';
     const cardDiv = document.createElement('div');
@@ -54,7 +55,8 @@ const displayMealDetails = (meal) => {
                     <div class="card-body">
                         <h5 class="card-title">${meal.strMeal}</h5>
                         <p class="card-text">${meal.strInstructions.slice(0, 500)}...</p>
-                    </div>
+                        <a href="${meal.strYoutube}" class = "btn btn-outline-primary">See Food Video How Make</a>
+                        </div>
                 </div>
             </div>
         </div>
